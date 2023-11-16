@@ -12,9 +12,9 @@ license: mit
 
 # IRIS fault detection Demo 
 
-- The model is running *LIVE* at [Huggingface](https://huggingface.co/spaces/Interactive-Coventry/IRIS__fault-detection-demo).
+- The model is running LIVE at [Huggingface](https://huggingface.co/spaces/Iris-Auto-ae/IRIS__fault-detection-demo-v0.1).
 
-- Base repo: [Github | Interactive-Coventry/IRIS__fault-detection-demo](https://github.com/Interactive-Coventry/IRIS__fault-detection-demo/)
+- Base repo: [Github | Iris-Auto-ae/IRIS__fault-detection-demo @ release](https://github.com/Iris-Auto-ae/IRIS__fault-detection-demo/tree/versions/v1/)
 
   - Run in a terminal with `python app.py` and open `http://localhost:7861` in your browser.
   
