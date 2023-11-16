@@ -13,9 +13,9 @@ license: mit
 # IRIS fault detection Demo 
 - Find out more in [iris-auto.ase](https://iris-auto.ae/)
 
-- The model is running LIVE at [Huggingface](https://huggingface.co/spaces/Interactive-Coventry/IRIS__fault-detection-demo).
+- The model is running LIVE at [Huggingface](https://huggingface.co/spaces/Iris-Auto-ae/IRIS__fault-detection-demo-v0.2).
 
-- Base repo: [Github | Interactive-Coventry/IRIS__fault-detection-demo @ release](https://github.com/Interactive-Coventry/IRIS__fault-detection-demo/tree/release/)
+- Base repo: [Github | Iris-Auto-ae/IRIS__fault-detection-demo @ release](https://github.com/Iris-Auto-ae/IRIS__fault-detection-demo/tree/release/)
 
   - Run in a terminal with `streamlit run app.py` and open `http://localhost:8501/` in your browser.
   
@@ -24,9 +24,4 @@ license: mit
 
 ![Demo2](/assets/demo_2.png)
 
-
-## Customize a fault detection model
-- Add a few images of your own and see how the model performs
-
-**Note:** For demo purposes the data folder is not editable. 
 
