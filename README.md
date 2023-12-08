@@ -11,7 +11,7 @@ license: mit
 ---
 
 # IRIS fault detection Demo 
-- Find out more in [iris-auto.ase](https://iris-auto.ae/)
+- Find out more in [iris-auto.com](https://iris-auto.com/)
 
 - The model is running LIVE at [Huggingface](https://huggingface.co/spaces/Iris-Auto-ae/IRIS__fault-detection-demo-v0.2).
 
