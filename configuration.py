@@ -59,3 +59,5 @@ instructions = {
     "ocr": {},
     "measurement_tool": {},
 }
+
+primary_color = "blue"

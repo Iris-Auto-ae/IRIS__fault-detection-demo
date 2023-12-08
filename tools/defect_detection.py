@@ -76,7 +76,7 @@ def run_defect_detection_demo(task_, placeholder):
         st.markdown(configuration.instructions[task_]["train"])
 
         input_gallery_imgs = get_example_images(choice)
-        st.markdown("##### :orange[Training Images]")
+        st.markdown(f"##### Training Images")
         st.image(input_gallery_imgs)
 
         st.markdown(configuration.instructions[task_]["evaluate"])
@@ -90,7 +90,7 @@ def run_defect_detection_demo(task_, placeholder):
         progress_bar.progress(100, text=f"Finished")
 
         result_gallery_imgs = get_result_images(choice)
-        st.markdown("##### :orange[Result Images]")
+        st.markdown(f"##### :{configuration.primary_color}[Result Images]")
         st.image(result_gallery_imgs)
 
         st.markdown(configuration.find_out_more)
@@ -107,17 +107,19 @@ def setup_defect_detection_demo(placeholder):
     st.session_state["changed_dataset"] = True
 
     with placeholder.container():
+        st.title(configuration.modules[task_])
+
         col1, col2 = st.columns(2)
 
         with col1:
-            st.markdown(":orange[Select a target dataset]")
+            st.markdown(f"**:{configuration.primary_color}[Select a target dataset]**")
             available_datasets = configuration.instructions[task_]["datasets"]
             st.radio(options=available_datasets, label="Dataset", index=0, horizontal=True,
                      on_change=clicked_changed_dataset, key="radio_dataset")
             run_btn = st.button(label="See how it works!", key="btn_run")
 
         with col2:
-            st.markdown(":orange[Example image for the selected dataset]")
+            st.markdown(f"**:{configuration.primary_color}[Example image for the selected dataset]**")
             dataset_img_placeholder = st.empty()
             st.markdown(configuration.data_attribution["mvtec"])
             update_show_example_images(dataset_img_placeholder)
