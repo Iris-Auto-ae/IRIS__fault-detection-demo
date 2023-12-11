@@ -80,6 +80,7 @@ def run_object_detection_demo(task_, placeholder):
 
         result_gallery_imgs = get_result_images(choice)
         st.markdown(f"##### :{configuration.primary_color}[Result Images]")
+        st.markdown(configuration.instructions[task_]["result_explanation"])
         st.image(result_gallery_imgs)
 
         st.markdown(configuration.find_out_more)
@@ -97,6 +98,7 @@ def setup_object_detection_demo(placeholder):
 
     with placeholder.container():
         st.title(configuration.modules[task_])
+        st.markdown(configuration.instructions[task_]["explanation"])
 
         col1, col2 = st.columns(2)
 

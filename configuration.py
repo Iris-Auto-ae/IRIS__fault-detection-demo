@@ -26,6 +26,11 @@ data_attribution = {
 
 
 def_det_instructions = {
+    "explanation": "Identifying image imperfections, ensuring products meet the highest quality standards. With "
+                   "sophisticated image analysis, even the most minute discrepancies are detected, reducing waste "
+                   "and enhancing product integrity.",
+    "result_explanation": "The software is able to detect scratches, broken parts and color variations on a fast "
+                          "moving assembly line",
     "train": """
             ### Train the model
             Give some example images so that the model will know what kind of artifacts it should look for.
@@ -35,13 +40,16 @@ def_det_instructions = {
     "evaluate": """
                 ### Evaluate the model
                 After the model is trained, we can pass new test images through the model.
-                
-                The results will appear here.
                 """,
     "datasets": ["nuts", "screw"],
 }
 
 obj_det_instructions = {
+    "explanation": "Recognizing and tracking various items in real-time, regardless of the complexity of the "
+                   "production line. This function ensures accurate sorting, counting and control in high-paced "
+                   "manufacturing environments.",
+    "result_explanation": "The software is able to detect, localise and classify a large variety of objects of "
+                          "different scale at once.",
     "train": """
             ### Train the model
             Give some example images with bounding boxes so that the model will know what to look for.
@@ -51,8 +59,6 @@ obj_det_instructions = {
     "evaluate": """
                 ### Evaluate the model
                 After the model is trained, we can pass new test images through the model.
-
-                The results will appear here.
                 """,
     "datasets": ["cars", "pills", "suitcase", "toothbrush"],
 }
