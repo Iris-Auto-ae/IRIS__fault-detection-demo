@@ -4,6 +4,8 @@ import streamlit as st
 from os.path import join as pathjoin
 from tools import defect_detection as def_det
 from tools import object_detection as obj_det
+from tools import measurement_tool as mes_tool
+from tools import ocr_tool as ocr_tool
 import logging
 
 logger = logging.getLogger("app")
@@ -26,13 +28,12 @@ def run_module():
             def_det.setup_defect_detection_demo(run_model_placeholder)
         elif st.session_state.task == "object_detection":
             obj_det.setup_object_detection_demo(run_model_placeholder)
-        elif st.session_state.task == "ocr":
-            pass
+        elif st.session_state.task == "ocr_tool":
+            ocr_tool.setup_ocr_tool_demo(run_model_placeholder)
         elif st.session_state.task == "measurement_tool":
-            pass
+            mes_tool.setup_measurement_tool_demo(run_model_placeholder)
         else:
             pass
-
 
 st.set_page_config(
     page_title=configuration.demo_title, page_icon=pathjoin('assets', 'favicon.ico'),
@@ -43,6 +44,11 @@ st.set_page_config(
 run_model_placeholder = st.empty()
 
 with st.sidebar:
+
+    left_co, cent_co, last_co = st.columns(3)
+    with cent_co:
+        st.image(configuration.demo_logo, width=100)
+
     st.markdown(configuration.demo_explanation)
 
     if st.button(configuration.modules["defect_detection"], key="btn_defect_detection", type="primary",
@@ -53,8 +59,9 @@ with st.sidebar:
                  use_container_width=True):
         st.session_state["task"] = "object_detection"
         pass
-    if st.button(configuration.modules["ocr"], key="btn_ocr", type="primary", use_container_width=True):
-        st.session_state["task"] = "ocr"
+
+    if st.button(configuration.modules["ocr_tool"], key="btn_ocr", type="primary", use_container_width=True):
+        st.session_state["task"] = "ocr_tool"
         pass
 
     if st.button(configuration.modules["measurement_tool"], key="btn_measurement_tool", type="primary",
