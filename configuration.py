@@ -58,6 +58,10 @@ obj_det_instructions = {
 }
 
 mes_instructions = {
+    "explanation": "Quantifying dimensions to the finest degree. This feature guarantees that all parts and products "
+                   "fit perfectly to precise design specifications.",
+    "result_explanation": "The software is able to calculate dimensions such as height, width and radius with up to "
+                          "98% accuracy.",
     "train": """
             ### Train the model
             """,
@@ -69,6 +73,10 @@ mes_instructions = {
 }
 
 ocr_instructions = {
+    "explanation": "Transforming visual data into actionable text, enabling seamless data capture, traceability and "
+                   "streamlined inventory management. An essential tool for modern industries requiring precise label "
+                   "and character verification.",
+    "result_explanation": "The object is able to extract text from images and visual data.",
     "train": """
             ### Train the model
             """,

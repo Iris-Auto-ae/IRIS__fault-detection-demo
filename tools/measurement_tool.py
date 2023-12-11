@@ -40,6 +40,7 @@ def run_measurement_tool_demo(task_, placeholder):
         choice = configuration.instructions[task_]["datasets"][0]
         result_gallery_imgs = get_result_images(choice)
         st.markdown(f"##### :{configuration.primary_color}[Result Images]")
+        st.markdown(configuration.instructions[task_]["result_explanation"])
         st.image(result_gallery_imgs)
 
         st.markdown(configuration.find_out_more)
@@ -50,6 +51,7 @@ def setup_measurement_tool_demo(placeholder):
 
     with placeholder.container():
         st.title(configuration.modules[task_])
+        st.markdown(configuration.instructions[task_]["explanation"])
         run_btn = st.button(label="See how it works!", key="btn_run")
 
         results_placeholder = st.container()
